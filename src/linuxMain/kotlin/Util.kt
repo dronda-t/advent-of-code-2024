@@ -1,27 +1,13 @@
 import kotlinx.io.buffered
-import kotlinx.io.files.FileSystem
 import kotlinx.io.files.Path
 import kotlinx.io.files.SystemFileSystem
-import kotlinx.io.readLine
+import kotlinx.io.readString
+
 
 fun readInput(name: String): List<String> {
-    return SystemFileSystem.source(Path("inputs/$name.txt")).buffered().use { fileSource ->
-        buildList {
-            while (true) {
-                val line = fileSource.readLine() ?: break
-                add(line)
-            }
-        }
-    }
+    return readInputRaw(name).split('\n').dropLast(1)
 }
 
 fun readInputRaw(name: String): String {
-    return SystemFileSystem.source(Path("inputs/$name.txt")).buffered().use { fileSource ->
-        buildString {
-            while (!fileSource.exhausted()) {
-                val line = fileSource.readLine() ?: break
-                append(line)
-            }
-        }
-    }
+    return SystemFileSystem.source(Path("inputs/$name.txt")).buffered().readString()
 }

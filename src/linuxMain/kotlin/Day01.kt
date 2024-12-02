@@ -1,7 +1,10 @@
 import kotlin.math.absoluteValue
 
-fun day01() {
-    fun part1(lines: List<String>): Int {
+/*
+Benchmarks.adventBenchmark  avgt    5  0.375 ± 0.005  ms/op
+ */
+object Day01 : AdventDay {
+    override fun part1(lines: List<String>): Int {
         val list1 = mutableListOf<Int>()
         val list2 = mutableListOf<Int>()
         lines.forEach { line ->
@@ -15,7 +18,7 @@ fun day01() {
         }
     }
 
-    fun part2(lines: List<String>): Int {
+    override fun part2(lines: List<String>): Int {
         val nums = mutableListOf<Int>()
         val occurances = hashMapOf<Int, Int>()
         lines.forEach { line ->
@@ -31,8 +34,4 @@ fun day01() {
             number * occuranceCount
         }
     }
-
-    val result = readInput("Day01")
-//    println(part1(result))
-    part2(result)
 }

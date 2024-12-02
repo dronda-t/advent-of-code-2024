@@ -1,4 +1,5 @@
 
 fun main() {
-    day01()
+    val input = readInput("Day01")
+    println(Day01.part1(input))
 }
