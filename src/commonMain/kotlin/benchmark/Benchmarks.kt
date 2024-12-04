@@ -11,18 +11,18 @@ import kotlinx.benchmark.State
 import readInput
 
 @State(Scope.Benchmark)
-//@BenchmarkMode(Mode.AverageTime)
-//@OutputTimeUnit(BenchmarkTimeUnit.MILLISECONDS)
+@BenchmarkMode(Mode.AverageTime)
+@OutputTimeUnit(BenchmarkTimeUnit.MILLISECONDS)
 class Benchmarks {
-    private val input = readInput("Day02")
+    private val input = readInput("Day03")
 
     @Benchmark
-    fun `Day 2 part 2`() {
-        Day02.part2(input)
+    fun Day3part2() {
+        Day03.part2(input)
     }
 
-    @Benchmark
-    fun `Day 2 part 2 diff approach`() {
-        Day02.part2(input)
-    }
+//    @Benchmark
+//    fun `Day 2 part 2 diff approach`() {
+//        Day02.part2(input)
+//    }
 }
