@@ -1,11 +1,16 @@
 import kotlin.math.absoluteValue
 
 /**
- * linuxX64 summary:
- * Benchmark                               Mode  Cnt     Score   Error    Units
- * Benchmarks.Day 2 part 2 diff approach  thrpt    5  1218.986 ± 3.568  ops/sec
- * Benchmarks.Day 2 part 2                thrpt    5  1131.801 ± 5.350  ops/sec
- */
+jvm summary:
+Benchmark                          Mode  Cnt     Score     Error  Units
+Benchmarks.Day2part2              thrpt    5  4878.767 ± 105.972  ops/s
+Benchmarks.Day2part2diffapproach  thrpt    5  5496.809 ± 502.555  ops/s
+
+linuxX64 summary:
+Benchmark                          Mode  Cnt     Score    Error    Units
+Benchmarks.Day2part2              thrpt    5  1240.524 ± 21.338  ops/sec
+Benchmarks.Day2part2diffapproach  thrpt    5  1534.222 ± 18.371  ops/sec
+*/
 
 object Day02 : AdventDay {
     private fun validLevel(levels: List<Int>): Boolean {
