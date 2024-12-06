@@ -1,6 +1,6 @@
 
 fun main() {
-    val input = readInput("Day03")
+    val input = readInput("Day05")
 //    input.map {
 //        val splits = it.split(" ").map { it.toInt() }
 //        val firstSecond = splits[0] > splits[1]
@@ -9,5 +9,5 @@ fun main() {
 //            println(splits)
 //        }
 //    }
-    println(Day03.part2(input))
+    println(Day05.part2(input))
 }
